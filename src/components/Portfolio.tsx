@@ -40,7 +40,7 @@ export default function PortfolioSection() {
             <div key={idx} className="p-6 bg-zinc-100 dark:bg-zinc-800 rounded-xl shadow hover:shadow-md transition-all">
               <div className="flex items-center justify-between mb-3">
                 <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{project.title}</h3>
-                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-primary text-gray-800 dark:text-white hover:underline">
                   <ExternalLink size={20} />
                 </a>
               </div>

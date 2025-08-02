@@ -44,7 +44,7 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="max-w-6xl mx-auto py-12 px-4 md:px-16 bg-white dark:bg-gray-950"
+      className="max-w-6xl mx-auto py-12 pb-2 px-4 md:px-16 bg-white dark:bg-gray-950"
     >
       <h2 className="text-3xl font-bold mb-12 text-left md:text-center text-gray-800 dark:text-white">
         Experience

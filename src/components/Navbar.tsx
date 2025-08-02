@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useMobileMenu } from "@/context/MobileMenuContext";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -16,7 +16,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const {isOpen, setIsOpen} = useMobileMenu();
   const activeSection = useActiveSection(["hero", "about", "services", "portfolio", "contact"])
 
   return (
@@ -59,17 +59,21 @@ export default function Navbar() {
           <ThemeToggle />
           <button
             className="md:hidden text-gray-800 dark:text-white"
-            onClick={() => setMenuOpen((prev) => !prev)}
+            onClick={(e) => {
+              e.stopPropagation()
+              setIsOpen(!isOpen)}
+            }
+            aria-expanded={isOpen}
             aria-label="Toggle Menu"
           >
-            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {menuOpen && (
+        {isOpen && (
           <motion.ul
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
@@ -81,7 +85,10 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   className="block text-gray-800 dark:text-gray-100 hover:text-blue-500 transition-colors"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => {
+                    e.stopPropagation()
+                  setIsOpen(false);
+                  }}
                 >
                   {link.name}
                 </Link>

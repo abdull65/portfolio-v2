@@ -32,14 +32,14 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="max-w-6xl mx-auto py-12 px-4 md:px-16 bg-white dark:bg-zinc-950 text-zinc-900 dark:text-white">
+    <section id="portfolio" className="max-w-6xl mx-auto py-12 px-4 md:px-16 bg-white dark:bg-gray-950">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-10 text-start md:text-center">Portfolio</h2>
+        <h2 className="text-3xl font-bold mb-10 text-start md:text-center text-gray-800 dark:text-white">Portfolio</h2>
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project, idx) => (
             <div key={idx} className="p-6 bg-zinc-100 dark:bg-zinc-800 rounded-xl shadow hover:shadow-md transition-all">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{project.title}</h3>
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                   <ExternalLink size={20} />
                 </a>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useActiveSection } from "@/hooks/useActiveSection";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
@@ -16,6 +17,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const activeSection = useActiveSection(["hero", "about", "services", "portfolio", "contact"])
 
   return (
     <nav
@@ -38,12 +40,16 @@ export default function Navbar() {
         >
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a
+              <Link
                 href={link.href}
-                className="text-gray-800 dark:text-gray-100 hover:text-blue-500 transition-colors"
+                className={`text-sm transition-colors ${
+                    activeSection === link.href.replace("#", "")
+                      ? "text-blue-500 font-semibold"
+                      : "text-gray-800 dark:text-gray-100"
+                  }`}
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </motion.ul>
@@ -72,13 +78,13 @@ export default function Navbar() {
           >
             {navLinks.map((link) => (
               <li key={link.name} className="py-2 border-b border-gray-200 dark:border-gray-700 last:border-none">
-                <a
+                <Link
                   href={link.href}
                   className="block text-gray-800 dark:text-gray-100 hover:text-blue-500 transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </motion.ul>

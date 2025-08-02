@@ -39,7 +39,7 @@ export default function AboutMe() {
             About Me
           </h2>
 
-          <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+          <p className="text-gray-800 dark:text-white text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
             I’m a passionate Frontend Developer with a strong eye for clean UI
             and responsive design. I specialize in building fast, accessible,
             and user-friendly web applications using modern technologies like
@@ -50,7 +50,7 @@ export default function AboutMe() {
 
           <motion.a
             href="#contact"
-             className="inline-flex items-center border-4 text-white px-6 py-1 rounded-full shadow hover:bg-primary/90 transition"
+             className="inline-flex items-center border-4 border-gray-800 dark:border-white text-gray-800 dark:text-white px-6 py-1 rounded-full shadow hover:bg-primary/90 transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

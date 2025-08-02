@@ -34,7 +34,7 @@ const experiences = [
   {
     title: "Freelancer",
     company: "Various Clients",
-    period: "2022 - 2023",
+    period: "2022 - 2025",
     description:
       "Delivered multiple client projects including eCommerce, landing pages, and blogs using modern frontend stacks.",
   },
@@ -59,7 +59,7 @@ export default function ExperienceSection() {
             } items-start md:items-center relative`}
           >
             {/* Dot */}
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-1 w-4 h-4 bg-blue-500 rounded-full z-10"></div>
+            <div className="absolute -left-2 md:left-1/2 transform md:-translate-x-1/2 top-1 w-4 h-4 bg-blue-500 rounded-full z-10"></div>
 
             {/* Vertical line */}
             <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full border-l-2 border-gray-300 dark:border-gray-700 z-0"></div>

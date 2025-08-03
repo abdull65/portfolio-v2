@@ -19,11 +19,11 @@ export default function AboutMe() {
           transition={{ duration: 0.6 }}
         >
           <Image
-            src="/about-photo.png"
+            src="/images/about-photo.png"
             alt="Abdullahi's Profile"
             width={256}
             height={320}
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full grayscale"
           />
         </motion.div>
 

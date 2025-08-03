@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
         <MobileMenuProvider>
           {/* This wrapper handles the mobile menu state and click outside to close */}
           <Navbar />

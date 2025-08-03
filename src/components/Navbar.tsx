@@ -27,7 +27,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         <Link href="#">
-          <Image src="/logo.png" alt="Logo" width={40} height={40} />
+          <Image src="/images/logo.png" alt="Logo" width={40} height={40} className="grayscale" />
         </Link>
 
         {/* Desktop Menu */}
@@ -42,7 +42,7 @@ export default function Navbar() {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className={`text-sm transition-colors ${
+                className={`text-lg transition-colors ${
                     activeSection === link.href.replace("#", "")
                       ? "text-blue-500 font-semibold"
                       : "text-gray-800 dark:text-gray-100"
@@ -84,7 +84,7 @@ export default function Navbar() {
               <li key={link.name} className="py-2 border-b border-gray-200 dark:border-gray-700 last:border-none">
                 <Link
                   href={link.href}
-                  className="block text-gray-800 dark:text-gray-100 hover:text-blue-500 transition-colors"
+                  className="block text-base text-gray-800 dark:text-gray-100 hover:text-blue-500 transition-colors"
                   onClick={(e) => {
                     e.stopPropagation()
                   setIsOpen(false);

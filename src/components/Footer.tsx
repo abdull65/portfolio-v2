@@ -5,7 +5,7 @@ import { Github, Linkedin, Mail } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="max-w-6xl mx-auto bg-white dark:bg-gray-950 py-8 text-center text-zinc-700 dark:text-zinc-300">
+    <footer className="max-w-6xl mx-auto bg-white dark:bg-gray-900 py-8 text-center text-zinc-700 dark:text-zinc-300 border-t-2 border-gray-200 dark:border-gray-800">
       <div className="max-w-4xl mx-auto px-4 flex flex-col gap-6">
         <div className="flex justify-center gap-6">
           <a

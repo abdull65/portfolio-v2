@@ -18,6 +18,7 @@ const toggleTheme = () => {
   const newTheme = theme === "light" ? "dark" : "light";
   setTheme(newTheme);
   document.documentElement.classList.toggle("dark", newTheme === "dark");
+  localStorage.setItem("theme", newTheme);
 }
   return(
   <div className="w-6 h-6 rounded-full bg-gray-400 dark:bg-gray-200">

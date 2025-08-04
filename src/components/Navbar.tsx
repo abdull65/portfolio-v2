@@ -84,7 +84,11 @@ export default function Navbar() {
               <li key={link.name} className="py-2 border-b border-gray-200 dark:border-gray-700 last:border-none">
                 <Link
                   href={link.href}
-                  className="block text-base text-gray-800 dark:text-gray-100 hover:text-blue-500 transition-colors"
+                  className={`text-lg transition-colors ${
+                    activeSection === link.href.replace("#", "")
+                      ? "text-blue-500 font-semibold"
+                      : "text-gray-800 dark:text-gray-100"
+                  }`}
                   onClick={(e) => {
                     e.stopPropagation()
                   setIsOpen(false);

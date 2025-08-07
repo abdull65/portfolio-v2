@@ -55,9 +55,14 @@ export default function PortfolioSection() {
       className="max-w-6xl mx-auto py-16 px-4 md:px-16 bg-white dark:bg-gray-950"
     >
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-12 text-start md:text-center text-gray-800 dark:text-white">
+        <motion.h2
+        initial={{opacity: 0, y: -30}}
+        whileInView={{opacity: 1, y: 0}}
+        viewport={{once: true}}
+        transition={{duration: 0.6}}
+        className="text-3xl font-bold mb-12 text-start md:text-center text-gray-800 dark:text-white">
           Portfolio
-        </h2>
+        </motion.h2>
 
         <div className="grid gap-10 md:grid-cols-2">
           {projects.map((project, id) => (

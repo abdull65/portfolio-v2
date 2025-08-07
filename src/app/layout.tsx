@@ -14,12 +14,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
         <MobileMenuProvider>
-          {/* This wrapper handles the mobile menu state and click outside to close */}
           <Navbar />
           <main className="min-h-screen">{children}</main>
           <Footer />
         </MobileMenuProvider>
-        {/* The BodyWrapper component ensures that clicks outside the mobile menu close it */}
       </body>
     </html>
   );

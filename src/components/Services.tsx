@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { motion } from "framer-motion";
 import { Code, MonitorSmartphone, PenTool } from "lucide-react"
 
 const services = [
@@ -24,7 +25,14 @@ const services = [
 export default function ServicesSection() {
   return (
     <section id="services" className="max-w-6xl mx-auto py-12 px-4 md:px-16 bg-gray-50 dark:bg-gray-900">
-      <h2 className="text-3xl text-start md:text-center font-bold mb-8 text-gray-800 dark:text-white">Services</h2>
+      <motion.h2
+      initial={{opacity: 0, y: -30}}
+      whileInView={{opacity: 1, y: 0}}
+      viewport={{once: true}}
+      transition={{duration: 0.6}}
+      className="text-3xl text-start md:text-center font-bold mb-8 text-gray-800 dark:text-white">
+        Services
+        </motion.h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <div

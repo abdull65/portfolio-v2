@@ -35,10 +35,14 @@ export default function AboutMe() {
           transition={{ duration: 0.6 }}
           className="max-w-xl md:ml-6"
         >
-          <h2 className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">
+          <motion.h2
+          initial={{opacity: 0, y: -30}}
+          whileInView={{opacity: 1, y: 0}}
+          viewport={{once: true}}
+          transition={{duration: 0.6}}
+          className="text-3xl font-bold mb-6 text-gray-800 dark:text-white">
             About Me
-          </h2>
-
+          </motion.h2>
           <p className="text-gray-800 dark:text-white text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
             I’m a passionate Frontend Developer with a strong eye for clean UI
             and responsive design. I specialize in building fast, accessible,
@@ -47,7 +51,6 @@ export default function AboutMe() {
             collaborating with teams, and continuously learning to improve my
             craft.
           </p>
-
           <motion.a
             href="#contact"
              className="inline-flex items-center border-4 border-gray-800 dark:border-white text-gray-800 dark:text-white px-6 py-1 rounded-full shadow hover:bg-primary/90 transition"

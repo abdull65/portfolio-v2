@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import React, { useRef, useEffect } from "react"
+import { motion} from "framer-motion"
 
 export default function SkillsSection() {
   const skills = [
@@ -44,9 +45,14 @@ export default function SkillsSection() {
       id="skills"
       className="max-w-6xl mx-auto px-4 py-12 text-center bg-gray-50 dark:bg-gray-950"
     >
-      <h2 className="text-3xl text-start md:text-center font-bold mb-12 text-gray-800 dark:text-white">
+      <motion.h2
+      initial={{opacity: 0, y: -30}}
+      whileInView={{opacity: 1, y: 0}}
+      viewport={{once: true}}
+      transition={{duration: 0.6}}
+      className="text-3xl text-start md:text-center font-bold mb-12 text-gray-800 dark:text-white">
         Stacks
-      </h2>
+      </motion.h2>
 
       <div
         ref={containerRef}

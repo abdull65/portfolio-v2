@@ -1,0 +1,44 @@
+{
+ "projects": [
+  {
+    "title": "Bomes Digital – Digital Agency",
+    "description": "A digital marketing brand website desinged with WordPress, Elementor, and AIOSEO.",
+    "tech": ["WordPress", "WooCommerce", "Custom CSS"],
+    "previewSrc": "/images/bomes.png",
+    "videoSrc": "/videos/bomes.webm",
+    "link": "https://bomesdigitals.com"
+  },
+  {
+    "title": "Getlinked – Hackathon Platform",
+    "description": "A hackathon website i participated in building during the Getlinked Hackathon 2023.",
+    "tech": ["HTML", "CSS", "Javascript"],
+    "previewSrc": "/images/getlinked.png",
+    "videoSrc": "/videos/getlinked.webm",
+    "link": "https://usum-getlinked-project.netlify.app/"
+  },
+  {
+    "title": "Portfolio Website v1.0",
+    "description": "Developer personal portfolio site built using Next.js and TailwindCSS.",
+    "tech": ["HTML", "CSS", "Javascript"],
+    "previewSrc": "/images/portfolio-v1.png",
+    "videoSrc": "/videos/portfolio-v1.webm",
+    "link": "https://usumtech.netlify.app"
+  },
+  {
+    "title": "Limas Luxury Abayas",
+    "description": "A responsive multi page e-commerce website for a clothing brand",
+    "tech": ["Wordpress", "Woocommerce", "AIOSEO"],
+    "previewSrc": "/images/limas-abayas.png",
+    "videoSrc": "/videos/limas-abayas.webm",
+    "link": "https://limas-abayas.com"
+  },
+  {
+    "title": "AZ Goods and Services LTD",
+    "description": "A responsive multi page e-commerce website for Household Goods and Services",
+    "tech": ["Shopify", "Custom CSS"],
+    "previewSrc": "/images/az-goods.png",
+    "videoSrc": "/videos/az-goods.webm",
+    "link": "https://azgoodsandservicesltd.com"
+  }
+]
+}

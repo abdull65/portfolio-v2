@@ -58,7 +58,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-4">
           <ThemeToggle />
           <button
-            className="md:hidden text-gray-800 dark:text-white"
+            className="md:hidden text-gray-800 dark:text-gray-100"
             onClick={(e) => {
               e.stopPropagation()
               setIsOpen(!isOpen)}

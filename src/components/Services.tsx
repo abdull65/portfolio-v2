@@ -30,7 +30,7 @@ export default function ServicesSection() {
       whileInView={{opacity: 1, y: 0}}
       viewport={{once: true}}
       transition={{duration: 0.6}}
-      className="text-3xl text-start md:text-center font-bold mb-8 text-gray-800 dark:text-white">
+      className="text-3xl text-start md:text-center font-bold mb-8 text-gray-800 dark:text-gray-100">
         Services
         </motion.h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -44,7 +44,7 @@ export default function ServicesSection() {
             className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-lg transition-all text-center"
           >
             <div className="flex justify-center mb-4 text-blue-500">{service.icon}</div>
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">{service.title}</h3>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">{service.title}</h3>
             <p className="text-gray-600 dark:text-gray-300 text-sm">{service.description}</p>
           </motion.div>
         ))}

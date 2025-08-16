@@ -52,7 +52,7 @@ export default function ExperienceSection() {
       whileInView={{opacity: 1, y: 0}}
       viewport={{once: true}}
       transition={{duration: 0.6}}
-      className="text-3xl font-bold mb-12 text-left md:text-center text-gray-800 dark:text-white">
+      className="text-3xl font-bold mb-12 text-left md:text-center text-gray-800 dark:text-gray-100">
         Experience
       </motion.h2>
 
@@ -74,10 +74,10 @@ export default function ExperienceSection() {
             <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full border-l-2 border-gray-300 dark:border-gray-700 z-0"></div>
 
             <div className="md:w-1/2 px-6">
-              <h3 className="text-xl font-semibold text-gray-800 dark:text-white">
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
                 {item.title}
               </h3>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
+              <span className="text-sm text-gray-500 dark:text-gray-400 truncate">
                 {item.company} — {item.period}
               </span>
               <p className="mt-2 text-gray-600 dark:text-gray-300">

@@ -61,7 +61,7 @@ export default function PortfolioSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl font-bold mb-12 text-start md:text-center text-gray-800 dark:text-white"
+          className="text-3xl font-bold mb-12 text-start md:text-center text-gray-800 dark:text-gray-100"
         >
           Portfolio
         </motion.h2>
@@ -110,14 +110,14 @@ export default function PortfolioSection() {
                 {/* Text Content */}
                 <div className="p-5">
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white truncate">
+                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 truncate">
                       {project.title}
                     </h3>
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-800 dark:text-white hover:text-blue-500"
+                      className="text-gray-800 dark:text-gray-100 hover:text-blue-500"
                     >
                       <ExternalLink size={20} />
                     </a>
@@ -152,7 +152,7 @@ export default function PortfolioSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleToggleView}
-              className="inline-flex items-center border-4 border-gray-800 dark:border-white text-gray-800 dark:text-white px-6 py-1 rounded-full shadow hover:bg-primary/90 transition"
+              className="inline-flex items-center border-4 border-gray-800 dark:border-gray-100 text-gray-800 dark:text-gray-100 px-6 py-1 rounded-full shadow hover:bg-primary/90 transition"
             >
               {visibleCount >= projects.length ? "View Less" : "View More"}
             </motion.button>

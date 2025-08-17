@@ -16,7 +16,7 @@ export default function ContactSection() {
         className="text-3xl font-bold mb-4 text-start md:text-center">
           Get in Touch
           </motion.h2>
-        <p className="mb-8 text-zinc-600 dark:text-zinc-400">
+        <p className="mb-8 text-base text-zinc-600 dark:text-zinc-400">
           Feel free to reach out for collaborations, freelance opportunities, or just to say hi!
         </p>
 
@@ -25,7 +25,7 @@ export default function ContactSection() {
             <Mail className="text-primary mt-1" />
             <div>
               <h4 className="font-semibold">Email</h4>
-              <p className="text-sm">audumohammed211@gmail.com</p>
+              <p className="text-base">audumohammed211@gmail.com</p>
             </div>
           </div>
 
@@ -33,7 +33,7 @@ export default function ContactSection() {
             <Phone className="text-primary mt-1" />
             <div>
               <h4 className="font-semibold">Phone</h4>
-              <p className="text-sm">+234 907 405 7222</p>
+              <p className="text-base">+234 907 405 7222</p>
             </div>
           </div>
 
@@ -41,7 +41,7 @@ export default function ContactSection() {
             <MapPin className="text-primary mt-1" />
             <div>
               <h4 className="font-semibold">Location</h4>
-              <p className="text-sm">Nigeria (Remote Available)</p>
+              <p className="text-base">Nigeria (Remote Available)</p>
             </div>
           </div>
         </div>

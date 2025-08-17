@@ -1,47 +1,35 @@
 "use client"
 
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { motion } from "framer-motion";
 
-const experiences = [
-  {
-    title: "Frontend Developer",
-    company: "Snaplodge",
-    period: "Jan 2024 - Present",
-    description:
-      "Built and maintained user interfaces with React and Tailwind CSS. Integrated real-time APIs and ensured mobile responsiveness.",
-  },
-  {
-    title: "Website Designer",
-    company: "Canary Prime Homes",
-    period: "Jul 2023 - Dec 2023",
-    description:
-      "Designed real estate landing pages, agent dashboards, and booking flows using WordPress and custom CSS.",
-  },
-  {
-    title: "Freelancer",
-    company: "Various Clients",
-    period: "2022 - 2023",
-    description:
-      "Delivered multiple client projects including eCommerce, landing pages, and blogs using modern frontend stacks.",
-  },
-  {
-    title: "Freelancer",
-    company: "Various Clients",
-    period: "2022 - 2023",
-    description:
-      "Delivered multiple client projects including eCommerce, landing pages, and blogs using modern frontend stacks.",
-  },
-  {
-    title: "Freelancer",
-    company: "Various Clients",
-    period: "2022 - 2025",
-    description:
-      "Delivered multiple client projects including eCommerce, landing pages, and blogs using modern frontend stacks.",
-  },
-]
+import staticExperience from "@/data/Experience.json";
+
+type Experience = {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+}
 
 export default function ExperienceSection() {
+const [experiences, setExperience] = useState<Experience[]>(staticExperience.experience);
+
+   useEffect(() => {
+    const fetchExperience = async () => {
+      try {
+        const res = await fetch("/data/Experience.json");
+        if(res.ok) {
+          const data = await res.json();
+          setExperience(data.experience || data);
+        }  
+      } catch (error) {
+        console.error("error fetching experience", error);
+      }
+    };
+    fetchExperience();
+   }, [])
+   
   return (
     <section
       id="experience"
@@ -58,7 +46,7 @@ export default function ExperienceSection() {
 
       <div 
       className="relative border-l-2 border-gray-300 dark:border-gray-700">
-        {experiences.map((item, index) => (
+        {experiences.map((experience, index) => (
           <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -75,13 +63,13 @@ export default function ExperienceSection() {
 
             <div className="md:w-1/2 px-6">
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
-                {item.title}
+                {experience.title}
               </h3>
               <span className="text-sm text-gray-500 dark:text-gray-400 truncate">
-                {item.company} — {item.period}
+                {experience.company} — {experience.period}
               </span>
               <p className="mt-2 text-gray-600 dark:text-gray-300">
-                {item.description}
+                {experience.description}
               </p>
             </div>
           </motion.div>

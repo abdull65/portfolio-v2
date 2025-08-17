@@ -45,7 +45,7 @@ export default function ServicesSection() {
           >
             <div className="flex justify-center mb-4 text-blue-500">{service.icon}</div>
             <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">{service.title}</h3>
-            <p className="text-gray-600 dark:text-gray-300 text-sm">{service.description}</p>
+            <p className="text-gray-600 dark:text-gray-300 text-base">{service.description}</p>
           </motion.div>
         ))}
       </div>

@@ -1,0 +1,40 @@
+{
+    "experience": [
+  {
+    "title": "Frontend Developer",
+    "company": "Snaplodge",
+    "period": "Jan 2024 - Present",
+    "description":
+      "Built and maintained user interfaces with React and Tailwind CSS. Integrated real-time APIs and ensured mobile responsiveness."
+  },
+  {
+    "title": "Website Designer",
+    "company": "Canary Prime Homes",
+    "period": "Jul 2023 - Dec 2023",
+    "description":
+      "Designed real estate landing pages, agent dashboards, and booking flows using WordPress and custom CSS."
+  },
+  {
+    "title": "Freelancer",
+    "company": "Various Clients",
+    "period": "2022 - 2023",
+    "description":
+      "Delivered multiple client projects including eCommerce, landing pages, and blogs using modern frontend stacks."
+  },
+  {
+    "title": "Freelancer",
+    "company": "Various Clients",
+    "period": "2022 - 2023",
+    "description":
+      "Delivered multiple client projects including eCommerce, landing pages, and blogs using modern frontend stacks."
+  },
+  {
+    "title": "Freelancer",
+    "company": "Various Clients",
+    "period": "2022 - 2025",
+    "description":
+      "Delivered multiple client projects including eCommerce, landing pages, and blogs using modern frontend stacks."
+  }
+]
+
+}

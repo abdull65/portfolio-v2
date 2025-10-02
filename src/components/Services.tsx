@@ -43,7 +43,7 @@ export default function ServicesSection() {
             key={index}
             className="p-6 bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-lg transition-all text-center"
           >
-            <div className="flex justify-center mb-4 text-blue-500">{service.icon}</div>
+            <div className="flex justify-center mb-4 text-gray-800">{service.icon}</div>
             <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">{service.title}</h3>
             <p className="text-gray-600 dark:text-gray-300 text-base">{service.description}</p>
           </motion.div>

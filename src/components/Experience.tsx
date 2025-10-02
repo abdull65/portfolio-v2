@@ -57,7 +57,7 @@ const [experiences, setExperience] = useState<Experience[]>(staticExperience.exp
               index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
             } items-start md:items-center relative`}
           >
-            <div className="absolute -left-2 md:left-1/2 transform md:-translate-x-1/2 top-1 w-4 h-4 bg-blue-500 rounded-full z-10"></div>
+            <div className="absolute -left-2 md:left-1/2 transform md:-translate-x-1/2 top-1 w-4 h-4 bg-gray-800 rounded-full z-10"></div>
 
             <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full border-l-2 border-gray-300 dark:border-gray-700 z-0"></div>
 

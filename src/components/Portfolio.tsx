@@ -117,7 +117,7 @@ export default function PortfolioSection() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-800 dark:text-gray-100 hover:text-blue-500"
+                      className="text-gray-800 dark:text-gray-100 hover:text-gray-800"
                     >
                       <ExternalLink size={20} />
                     </a>

@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav
       role="navigation"
       aria-label="Main"
-      className="max-w-6xl fixed top-4 left-1/2 transform -translate-x-1/2 w-[calc(100%-30px)] mx-auto bg-gray-50 dark:bg-gray-900 shadow-lg z-50 rounded-2xl"
+      className="max-w-5xl fixed top-4 left-1/2 transform -translate-x-1/2 w-[calc(100%-30px)] mx-auto bg-gray-50 dark:bg-gray-900 shadow-lg z-50 rounded-2xl"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         <Link href="#">
@@ -42,9 +42,9 @@ export default function Navbar() {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className={`text-lg transition-colors ${
+                className={`text-lg transition-colors hover:font-semibold ${
                     activeSection === link.href.replace("#", "")
-                      ? "text-blue-500 font-semibold"
+                      ? "text-gray-800 font-semibold"
                       : "text-gray-800 dark:text-gray-100"
                   }`}
               >
@@ -86,7 +86,7 @@ export default function Navbar() {
                   href={link.href}
                   className={`text-lg transition-colors ${
                     activeSection === link.href.replace("#", "")
-                      ? "text-blue-500 font-semibold"
+                      ? "text-gray-800 font-semibold"
                       : "text-gray-800 dark:text-gray-100"
                   }`}
                   onClick={(e) => {

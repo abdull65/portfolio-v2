@@ -44,7 +44,7 @@ export default function Navbar() {
                 href={link.href}
                 className={`text-lg transition-colors hover:font-semibold ${
                     activeSection === link.href.replace("#", "")
-                      ? "text-gray-800 font-semibold"
+                      ? "text-gray-800 font-semibold dark:text-gray-100"
                       : "text-gray-800 dark:text-gray-100"
                   }`}
               >

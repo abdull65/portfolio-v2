@@ -1,5 +1,6 @@
 import "./globals.css";
 import { ReactNode } from "react";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Inter, Space_Grotesk } from "next/font/google";
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <main className="min-h-screen">{children}</main>
           <Footer />
         </MobileMenuProvider>
+        <SpeedInsights />
       </body>
     </html>
   );

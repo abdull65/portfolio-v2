@@ -7,7 +7,7 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="max-w-6xl mx-auto px-4 py-16 bg-gray-50 dark:bg-gray-950"
+      className="max-w-6xl mx-auto px-4 py-16 bg-gray-50 dark:bg-gray-950 rounded-xl"
     >
       <div className="flex flex-col md:flex-row items-center justify-center gap-12 text-left">
         {/* Profile Image */}

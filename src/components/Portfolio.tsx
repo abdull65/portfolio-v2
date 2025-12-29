@@ -53,7 +53,7 @@ export default function PortfolioSection() {
   return (
     <section
       id="portfolio"
-      className="max-w-6xl mx-auto py-16 px-4 md:px-16 bg-white dark:bg-gray-950"
+      className="max-w-6xl mx-auto py-16 px-4 md:px-16 bg-white dark:bg-gray-950 rounded-xl"
     >
       <div className="max-w-5xl mx-auto">
         <motion.h2

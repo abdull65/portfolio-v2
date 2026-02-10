@@ -1,6 +1,14 @@
 {
  "projects": [
   {
+  "title": "Bridge Connect Africa",
+  "description": "Proposed WordPress website redesign focused on structure, clarity, and user experience.",
+  "caseStudySlug": "bridge-connect",
+  "previewSrc": "/images/bridge-connect-preview.png",
+  "videoSrc": "/videos/bridge-connect.webm",
+  "tech": ["WordPress", "UX Audit", "Elementor", "Performance"]
+},
+  {
     "title": "Bomes Digital – Digital Agency",
     "description": "A digital marketing brand website desinged with WordPress, Elementor, and AIOSEO.",
     "tech": ["WordPress", "WooCommerce", "Custom CSS"],

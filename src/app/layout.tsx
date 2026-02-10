@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Inter, Space_Grotesk } from "next/font/google";
 import { MobileMenuProvider } from "@/context/MobileMenuContext";
+import { Analytics } from "@vercel/analytics/next";
 const inter = Inter({
   subsets: ['latin'], variable: '--font-inter',
 })
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Footer />
         </MobileMenuProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

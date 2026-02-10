@@ -4,12 +4,14 @@ import React, { useEffect, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import staticProjects from "@/data/projects.json"; // Static import fallback
+import staticProjects from "@/data/projects.json";
+import Link from "next/link";
 
 type Project = {
   title: string;
   description: string;
-  link: string;
+  link?: string;
+  caseStudySlug?: string;
   previewSrc?: string;
   videoSrc?: string;
   tech: string[];
@@ -17,7 +19,7 @@ type Project = {
 
 export default function PortfolioSection() {
   const [visibleCount, setVisibleCount] = useState(4);
-  const [projects, setProjects] = useState<Project[]>(staticProjects.projects); // Start with static data
+  const [projects, setProjects] = useState<Project[]>(staticProjects.projects);
 
   // Fetch updated JSON from public folder as fallback 
   useEffect(() => {
@@ -63,7 +65,7 @@ export default function PortfolioSection() {
           transition={{ duration: 0.6 }}
           className="text-3xl font-bold mb-12 text-start md:text-center text-gray-800 dark:text-gray-100"
         >
-          Portfolio
+          Portfolio & Case Studies
         </motion.h2>
 
         <div className="grid gap-10 md:grid-cols-2">
@@ -113,14 +115,23 @@ export default function PortfolioSection() {
                     <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 truncate">
                       {project.title}
                     </h3>
-                    <a
+                    {project.caseStudySlug ? (
+                      <Link
+                      href={`/case-studies`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-800 dark:text-gray-100 hover:text-gray-800"
+                    >
+                      <ExternalLink size={20} />
+                    </Link>
+                  ) : <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-800 dark:text-gray-100 hover:text-gray-800"
                     >
                       <ExternalLink size={20} />
-                    </a>
+                    </a>}
                   </div>
 
                   <p className="mb-3 text-zinc-700 dark:text-zinc-300">

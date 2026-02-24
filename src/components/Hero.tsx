@@ -36,8 +36,7 @@ export default function HeroSection() {
       </motion.div>
 
       <motion.a
-        href="/abdullahi-mohammed.pdf"
-        download
+        href="/cv"
         className="inline-flex items-center border-4 border-gray-800 dark:border-gray-100 text-xl text-gray-800 dark:text-gray-100 px-6 py-3 rounded-full shadow hover:bg-primary/90 transition"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}

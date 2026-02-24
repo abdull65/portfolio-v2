@@ -6,12 +6,12 @@
   "caseStudySlug": "bridge-connect",
   "previewSrc": "/images/bridge-connect-preview.png",
   "videoSrc": "/videos/bridge-connect.webm",
-  "tech": ["WordPress", "UX Audit", "Elementor", "Performance"]
+  "tech": ["Case Study", "WordPress", "Elementor", "UX Audit", "Performance"]
 },
   {
     "title": "Bomes Digital – Digital Agency",
     "description": "A digital marketing brand website desinged with WordPress, Elementor, and AIOSEO.",
-    "tech": ["WordPress", "WooCommerce", "Custom CSS"],
+    "tech": ["WordPress", "Elementor", "WooCommerce", "Custom CSS"],
     "previewSrc": "/images/bomes.png",
     "videoSrc": "/videos/bomes.webm",
     "link": "https://bomesdigitals.com"
@@ -23,6 +23,14 @@
     "previewSrc": "/images/getlinked.png",
     "videoSrc": "/videos/getlinked.webm",
     "link": "https://usum-getlinked-project.netlify.app/"
+  },
+   {
+    "title": "Blessed Prinx Cosmetics",
+    "description": "A responsive multi page e-commerce website for Household Goods and Services",
+    "tech": ["WordPress", "Elementor", "WooCommerce", "Custom CSS"],
+    "previewSrc": "/images/blessed-prinx.png",
+    "videoSrc": "/videos/blessed-prinx.webm",
+    "link": "https://blessedprinxcosmetics.com"
   },
   {
     "title": "Portfolio Website v1.0",

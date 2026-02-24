@@ -1,26 +1,28 @@
 "use client";
 import { useRef, useEffect } from "react";
-import html2pdf from "html2pdf.js";
 
 export default function CV() {
   const cvRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!cvRef.current) return;
+useEffect(() => {
+  if (!cvRef.current) return;
 
-    // Small delay to ensure DOM fully renders
-    setTimeout(() => {
-      html2pdf()
-        .set({
-          margin: 0.5,
-          filename: "Abdullahi-Mohammed.pdf",
-          html2canvas: { scale: 2, backgroundColor: "#ffffff", useCORS: true },
-          jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
-        })
-        .from(cvRef.current!)
-        .save();
-    }, 500);
-  }, []);
+  const generatePDF = async () => {
+    const html2pdf = (await import("html2pdf.js")).default;
+
+    html2pdf()
+      .set({
+        margin: 0.5,
+        filename: "Abdullahi-Mohammed.pdf",
+        html2canvas: { scale: 2, backgroundColor: "#ffffff", useCORS: true },
+        jsPDF: { unit: "in", format: "a4", orientation: "portrait" },
+      })
+      .from(cvRef.current!)
+      .save();
+  };
+
+  setTimeout(generatePDF, 500);
+}, []);
 
   return (
     <div className="min-h-screen max-w-6xl mx-auto mt-20 px-6 py-12 bg-gray-50 dark:bg-gray-900">

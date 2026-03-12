@@ -1,60 +1,67 @@
 {
- "projects": [
-  {
-  "title": "Bridge Connect Africa",
-  "description": "Proposed WordPress website redesign focused on structure, clarity, and user experience.",
-  "caseStudySlug": "bridge-connect",
-  "previewSrc": "/images/bridge-connect-preview.png",
-  "videoSrc": "/videos/bridge-connect.webm",
-  "tech": ["Case Study", "WordPress", "Elementor", "UX Audit", "Performance"]
-},
-  {
-    "title": "Bomes Digital – Digital Agency",
-    "description": "A digital marketing brand website desinged with WordPress, Elementor, and AIOSEO.",
-    "tech": ["WordPress", "Elementor", "WooCommerce", "Custom CSS"],
-    "previewSrc": "/images/bomes.png",
-    "videoSrc": "/videos/bomes.webm",
-    "link": "https://bomesdigitals.com"
-  },
-  {
-    "title": "Getlinked – Hackathon Platform",
-    "description": "A hackathon website i participated in building during the Getlinked Hackathon 2023.",
-    "tech": ["HTML", "CSS", "Javascript"],
-    "previewSrc": "/images/getlinked.png",
-    "videoSrc": "/videos/getlinked.webm",
-    "link": "https://usum-getlinked-project.netlify.app/"
-  },
-   {
-    "title": "Blessed Prinx Cosmetics",
-    "description": "A responsive multi page e-commerce website for Household Goods and Services",
-    "tech": ["WordPress", "Elementor", "WooCommerce", "Custom CSS"],
-    "previewSrc": "/images/blessed-prinx.png",
-    "videoSrc": "/videos/blessed-prinx.webm",
-    "link": "https://blessedprinxcosmetics.com"
-  },
-  {
-    "title": "Portfolio Website v1.0",
-    "description": "Developer personal portfolio site built using Next.js and TailwindCSS.",
-    "tech": ["HTML", "CSS", "Javascript"],
-    "previewSrc": "/images/portfolio-v1.png",
-    "videoSrc": "/videos/portfolio-v1.webm",
-    "link": "https://usumtech.netlify.app"
-  },
-  {
-    "title": "Limas Luxury Abayas",
-    "description": "A responsive multi page e-commerce website for a clothing brand",
-    "tech": ["Wordpress", "Woocommerce", "AIOSEO"],
-    "previewSrc": "/images/limas-abayas.png",
-    "videoSrc": "/videos/limas-abayas.webm",
-    "link": "https://limas-abayas.com"
-  },
-  {
-    "title": "AZ Goods and Services LTD",
-    "description": "A responsive multi page e-commerce website for Household Goods and Services",
-    "tech": ["Shopify", "Custom CSS"],
-    "previewSrc": "/images/az-goods.png",
-    "videoSrc": "/videos/az-goods.webm",
-    "link": "https://azgoodsandservicesltd.com"
-  }
-]
+  "projects": [
+    {
+      "title": "Bridge Connect Africa",
+      "description": "Proposed website redesign focused on improving structure, clarity, and user experience.",
+      "caseStudySlug": "bridge-connect",
+      "previewSrc": "/images/bridge-connect-preview.png",
+      "videoSrc": "/videos/bridge-connect.webm",
+      "tech": ["Case Study", "WordPress", "Elementor", "UX Audit", "Performance"]
+    },
+    {
+      "title": "SoftNigeria",
+      "description": "Independent UX audit and proposed redesign direction for a lifestyle media and discovery platform.",
+      "caseStudySlug": "softnigeria",
+      "previewSrc": "/images/softnigeria-preview.png",
+      "tech": ["Case Study", "UX Audit", "Content Strategy", "Product Thinking", "Responsive Design"]
+    },
+    {
+      "title": "Bomes Digital – Digital Agency",
+      "description": "A digital marketing brand website designed with WordPress, Elementor, and AIOSEO.",
+      "tech": ["WordPress", "Elementor", "WooCommerce", "Custom CSS"],
+      "previewSrc": "/images/bomes.png",
+      "videoSrc": "/videos/bomes.webm",
+      "link": "https://bomesdigitals.com"
+    },
+    {
+      "title": "Getlinked – Hackathon Platform",
+      "description": "A hackathon website I participated in building during the Getlinked Hackathon 2023.",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "previewSrc": "/images/getlinked.png",
+      "videoSrc": "/videos/getlinked.webm",
+      "link": "https://usum-getlinked-project.netlify.app/"
+    },
+    {
+      "title": "Blessed Prinx Cosmetics",
+      "description": "A responsive multi-page e-commerce website for a cosmetics brand.",
+      "tech": ["WordPress", "Elementor", "WooCommerce", "Custom CSS"],
+      "previewSrc": "/images/blessed-prinx.png",
+      "videoSrc": "/videos/blessed-prinx.webm",
+      "link": "https://blessedprinxcosmetics.com"
+    },
+    {
+      "title": "Portfolio Website v1.0",
+      "description": "A personal developer portfolio website built with Next.js and Tailwind CSS.",
+      "tech": ["Next.js", "Tailwind CSS", "JavaScript"],
+      "previewSrc": "/images/portfolio-v1.png",
+      "videoSrc": "/videos/portfolio-v1.webm",
+      "link": "https://usumtech.netlify.app"
+    },
+    {
+      "title": "Limas Luxury Abayas",
+      "description": "A responsive multi-page e-commerce website for a fashion brand.",
+      "tech": ["WordPress", "WooCommerce", "AIOSEO"],
+      "previewSrc": "/images/limas-abayas.png",
+      "videoSrc": "/videos/limas-abayas.webm",
+      "link": "https://limas-abayas.com"
+    },
+    {
+      "title": "AZ Goods and Services LTD",
+      "description": "A responsive multi-page e-commerce website for a household goods and services business.",
+      "tech": ["Shopify", "Custom CSS"],
+      "previewSrc": "/images/az-goods.png",
+      "videoSrc": "/videos/az-goods.webm",
+      "link": "https://azgoodsandservicesltd.com"
+    }
+  ]
 }

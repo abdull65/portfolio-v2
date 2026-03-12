@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -19,17 +19,17 @@ type Project = {
 
 export default function PortfolioSection() {
   const [visibleCount, setVisibleCount] = useState(4);
-  const [projects, setProjects] = useState<Project[]>(staticProjects.projects);
+  const [projects, setProjects] = useState<Project[]>(staticProjects.projects ?? []);
 
-  // Fetch updated JSON from public folder as fallback 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const res = await fetch("/data/projects.json");
-        if (res.ok) {
-          const data = await res.json();
-          setProjects(data.project || data);
-        }
+
+        if (!res.ok) return;
+
+        const data = await res.json();
+        setProjects(data.projects ?? data ?? []);
       } catch (error) {
         console.error("Error fetching projects:", error);
       }
@@ -39,17 +39,27 @@ export default function PortfolioSection() {
   }, []);
 
   useEffect(() => {
-    if(window.innerWidth < 768) {
-      document.querySelectorAll("video").forEach((vid) => vid.play());
-    }
+    if (typeof window === "undefined") return;
+    if (window.innerWidth >= 768) return;
+
+    const videos = document.querySelectorAll("video");
+    videos.forEach((video) => {
+      video.play().catch(() => {});
+    });
   }, [projects]);
+
+  const visibleProjects = useMemo(
+    () => projects.slice(0, visibleCount),
+    [projects, visibleCount]
+  );
 
   const handleToggleView = () => {
     if (visibleCount >= projects.length) {
       setVisibleCount(4);
-    } else {
-      setVisibleCount((prev) => prev + 4);
+      return;
     }
+
+    setVisibleCount((prev) => prev + 4);
   };
 
   return (
@@ -70,92 +80,97 @@ export default function PortfolioSection() {
 
         <div className="grid gap-10 md:grid-cols-2">
           <AnimatePresence>
-            {projects.slice(0, visibleCount).map((project, id) => (
-              <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 100 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -100 }}
-                transition={{
-                  duration: 0.5,
-                  ease: "easeOut",
-                  delay: id * 0.15,
-                }}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-all group overflow-hidden"
-              >
-                {/* Media Preview */}
-                <div className="relative aspect-video overflow-hidden">
-                  {project.previewSrc && (
-                    <Image
-                      src={project.previewSrc}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-opacity duration-500 ease-out group-hover:opacity-0"
-                    />
-                  )}
-                  {project.videoSrc && (
-                    <video
-                      src={project.videoSrc}
-                      muted
-                      loop
-                      playsInline
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      onMouseEnter={(e) => e.currentTarget.play()}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.pause();
-                        e.currentTarget.currentTime = 0;
-                      }}
-                    />
-                  )}
-                </div>
+            {visibleProjects.map((project, id) => {
+              const isCaseStudy = Boolean(project.caseStudySlug);
+              const href = isCaseStudy
+                ? `/case-studies/${project.caseStudySlug}`
+                : project.link ?? "#";
 
-                {/* Text Content */}
-                <div className="p-5">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 truncate">
-                      {project.title}
-                    </h3>
-                    {project.caseStudySlug ? (
+              return (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -100 }}
+                  transition={{
+                    duration: 0.5,
+                    ease: "easeOut",
+                    delay: id * 0.15,
+                  }}
+                  className="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition-all group overflow-hidden"
+                >
+                  <div className="relative aspect-video overflow-hidden">
+                    {project.previewSrc ? (
+                      <Image
+                        src={project.previewSrc}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-opacity duration-500 ease-out group-hover:opacity-0"
+                      />
+                    ) : null}
+
+                    {project.videoSrc ? (
+                      <video
+                        src={project.videoSrc}
+                        muted
+                        loop
+                        playsInline
+                        preload="metadata"
+                        className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        onMouseEnter={(e) => e.currentTarget.play()}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.pause();
+                          e.currentTarget.currentTime = 0;
+                        }}
+                      />
+                    ) : null}
+                  </div>
+
+                  <div className="p-5">
+                    <div className="flex items-start justify-between gap-4 mb-3">
+                      <div>
+                        <span className="inline-block mb-2 text-xs font-medium px-2 py-1 rounded-full bg-zinc-100 dark:bg-zinc-700 text-zinc-600 dark:text-zinc-300">
+                          {isCaseStudy ? "Case Study" : "Live Project"}
+                        </span>
+
+                        <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
+                          {project.title}
+                        </h3>
+                      </div>
+
                       <Link
-                      href={`/case-studies`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-800 dark:text-gray-100 hover:text-gray-800"
-                    >
-                      <ExternalLink size={20} />
-                    </Link>
-                  ) : <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-800 dark:text-gray-100 hover:text-gray-800"
-                    >
-                      <ExternalLink size={20} />
-                    </a>}
-                  </div>
-
-                  <p className="mb-3 text-zinc-700 dark:text-zinc-300">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 text-sm text-zinc-600 dark:text-zinc-400">
-                    {project.tech.map((tech, techId) => (
-                      <span
-                        key={techId}
-                        className="bg-zinc-200 dark:bg-zinc-700 px-2 py-1 rounded-full"
+                        href={href}
+                        target={isCaseStudy ? "_self" : "_blank"}
+                        rel={isCaseStudy ? undefined : "noopener noreferrer"}
+                        className="shrink-0 text-gray-800 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                        aria-label={`Open ${project.title}`}
                       >
-                        {tech}
-                      </span>
-                    ))}
+                        <ExternalLink size={20} />
+                      </Link>
+                    </div>
+
+                    <p className="mb-4 text-zinc-700 dark:text-zinc-300">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 text-sm text-zinc-600 dark:text-zinc-400">
+                      {project.tech.map((tech, techId) => (
+                        <span
+                          key={techId}
+                          className="bg-zinc-200 dark:bg-zinc-700 px-2 py-1 rounded-full"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </AnimatePresence>
         </div>
 
-        {/* View More / View Less Button */}
-        {projects.length > 4 && (
+        {projects.length > 4 ? (
           <div className="mt-10 text-center">
             <motion.button
               initial={{ opacity: 0 }}
@@ -163,12 +178,12 @@ export default function PortfolioSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleToggleView}
-              className="inline-flex items-center border-4 border-gray-800 dark:border-gray-100 text-gray-800 dark:text-gray-100 px-6 py-1 rounded-full shadow hover:bg-primary/90 transition"
+              className="inline-flex items-center border-2 border-gray-800 dark:border-gray-100 text-gray-800 dark:text-gray-100 px-6 py-2 rounded-full shadow hover:bg-gray-50 dark:hover:bg-gray-900 transition"
             >
               {visibleCount >= projects.length ? "View Less" : "View More"}
             </motion.button>
           </div>
-        )}
+        ) : null}
       </div>
     </section>
   );

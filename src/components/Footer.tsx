@@ -7,14 +7,14 @@ export default function Footer() {
   return (
     <footer className="max-w-6xl mx-auto bg-white dark:bg-gray-900 py-8 text-center text-zinc-700 dark:text-zinc-300 border-t-2 border-gray-200 dark:border-gray-800">
       <div className="max-w-4xl mx-auto px-4 flex flex-col gap-6">
-        <div className="flex justify-center gap-6">
+        <div className="flex justify-center gap-8">
           <a
             href="https://github.com/abdull65"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition"
           >
-            <Github className="w-5 h-5" />
+            <Github className="w-8 h-8" />
           </a>
           <a
             href="https://www.linkedin.com/in/abdullahi-mohammed-b7903a233/"
@@ -22,13 +22,13 @@ export default function Footer() {
             rel="noopener noreferrer"
             className="hover:text-primary transition"
           >
-            <Linkedin className="w-5 h-5" />
+            <Linkedin className="w-8 h-8" />
           </a>
           <a
             href="mailto:audumohammed211@gmail.com"
             className="hover:text-primary transition"
           >
-            <Mail className="w-5 h-5" />
+            <Mail className="w-8 h-8" />
           </a>
         </div>
 

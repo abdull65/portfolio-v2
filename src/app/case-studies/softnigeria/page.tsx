@@ -11,30 +11,30 @@ export default function SoftNigeriaCaseStudy() {
       <CaseStudyIntro
         label="Case Study · UX Audit / Proposed Redesign Concept"
         title="SoftNigeria"
-        subtitle="Website Experience Review & Redesign Direction"
-        description="This case study explores how the SoftNigeria website could be improved through clearer structure, stronger content presentation, and a more modern user experience."
-        extra="The goal was to evaluate the current platform and identify opportunities to improve content discovery, business visibility, and audience engagement."
+        subtitle="From Awareness to Participation, Rethinking the Civic Experience"
+        description="This case study explores how the SoftNigeria website can evolve from an awareness-driven landing page into a more complete civic participation platform that better supports youth engagement, onboarding, trust, and long-term involvement."
+        extra="The goal was to analyze the current experience, identify gaps between mission and interaction, and propose a clearer, more action-oriented direction."
       />
 
       <CaseStudyDivider />
 
       <CaseStudySection eyebrow="Overview">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+        <div className="grid grid-cols-1 gap-6 text-sm sm:grid-cols-2">
           <div>
-            <p className="text-gray-500 dark:text-gray-400 mb-1">Role</p>
-            <p>Frontend Developer / UX Reviewer</p>
+            <p className="mb-1 text-gray-500 dark:text-gray-400">Role</p>
+            <p>Website / Frontend Developer</p>
           </div>
           <div>
-            <p className="text-gray-500 dark:text-gray-400 mb-1">Project Type</p>
+            <p className="mb-1 text-gray-500 dark:text-gray-400">Project Type</p>
             <p>Independent UX Audit</p>
           </div>
           <div>
-            <p className="text-gray-500 dark:text-gray-400 mb-1">Scope</p>
-            <p>Content structure, navigation, mobile usability, platform direction</p>
+            <p className="mb-1 text-gray-500 dark:text-gray-400">Scope</p>
+            <p>Information architecture, navigation, engagement flow, trust-building, mobile usability</p>
           </div>
           <div>
-            <p className="text-gray-500 dark:text-gray-400 mb-1">Outcome</p>
-            <p>Strategic redesign recommendations for a lifestyle media platform</p>
+            <p className="mb-1 text-gray-500 dark:text-gray-400">Outcome</p>
+            <p>Strategic redesign direction for a youth civic engagement platform</p>
           </div>
         </div>
       </CaseStudySection>
@@ -47,19 +47,19 @@ export default function SoftNigeriaCaseStudy() {
           alt="SoftNigeria website preview"
           width={800}
           height={400}
-          className="w-full h-auto rounded-lg mb-4"
+          className="mb-4 h-auto w-full rounded-lg"
         />
 
         <p>
-          SoftNigeria presents itself as a lifestyle and discovery platform
-          focused on promoting experiences, businesses, culture, and events
-          across Nigerian cities.
+          SoftNigeria is a youth-centered civic movement focused on placing young Nigerians at the heart of governance, encouraging them to learn, engage, and contribute to national development with empathy and purpose.
         </p>
 
         <p className="mt-3">
-          After noticing the brand’s relaunch activity, I reviewed the website
-          to assess how well the digital experience supports the platform’s
-          identity, content goals, and growth potential.
+          The platform communicates values such as youth empowerment, unity in diversity, responsibility, hope, and modern civic participation, while highlighting initiatives like voter sensitization, entrepreneurship empowerment, government awareness campaigns, and community projects.
+        </p>
+
+        <p className="mt-3">
+          After reviewing the website, I wanted to understand how effectively the digital experience supports that mission, especially in helping users move from interest to meaningful participation.
         </p>
       </CaseStudySection>
 
@@ -67,84 +67,132 @@ export default function SoftNigeriaCaseStudy() {
 
       <CaseStudySection title="Platform Understanding">
         <p className="mb-4">
-          From a product perspective, SoftNigeria sits at the intersection of
-          lifestyle media, business promotion, and city discovery.
+          SoftNigeria is not just introducing an idea. It is presenting itself as a movement designed to activate, educate, and organize young people around civic participation.
         </p>
 
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Readers looking for places, events, and experiences</li>
-          <li>Businesses seeking visibility and promotion</li>
-          <li>Users exploring lifestyle content across major Nigerian cities</li>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Youth interested in governance and civic responsibility</li>
+          <li>Students and emerging leaders</li>
+          <li>Volunteers and community participants</li>
+          <li>Organizers and contributors across different states</li>
         </ul>
 
         <p className="mt-4">
-          Because of this, the website should feel less like a basic blog and
-          more like a curated content platform with stronger visual hierarchy,
-          clearer navigation, and better discovery paths.
+          Because of this, the website should do more than explain the movement. It should guide users into clear participation paths, build trust, and support ongoing engagement over time.
+        </p>
+      </CaseStudySection>
+
+      <CaseStudyDivider />
+
+      <CaseStudySection title="Core Observation">
+        <p className="mb-4">
+          The website communicates the movement clearly, but the experience remains largely informational. Users can understand the mission, but they are not guided into structured participation in a meaningful way.
+        </p>
+
+        <p>
+          This creates a gap between what SoftNigeria represents, a movement built around action, connection, and civic engagement, and how users are currently able to interact with it digitally.
         </p>
       </CaseStudySection>
 
       <CaseStudyDivider />
 
       <CaseStudySection title="Key Findings">
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc space-y-2 pl-6">
           <li>
-            The homepage lacks a strong content hierarchy, making featured
-            stories, businesses, and experiences less visible
+            The hero section introduces the mission effectively, but does not clearly explain what happens after a user chooses to join
           </li>
           <li>
-            The visual presentation does not fully reflect the energy and
-            quality expected from a lifestyle-focused brand
+            Navigation is extremely limited, restricting users from exploring programs, initiatives, leadership, or deeper platform content
           </li>
           <li>
-            Navigation can be improved to support easier exploration across
-            categories and content types
+            Most sections are designed for reading rather than interaction, creating a passive experience
           </li>
           <li>
-            Content cards and page layouts feel closer to a default blog setup
-            than a modern media platform
+            Programs and initiatives are visible, but not explorable, actionable, or connected to specific next steps
           </li>
           <li>
-            Mobile reading and browsing could be better optimized for spacing,
-            scanning, and tap interactions
+            Calls-to-action are repeated without progression, offering the same action regardless of user intent or stage
           </li>
           <li>
-            The platform misses opportunities for engagement features such as
-            trending sections, newsletters, and business spotlight modules
+            The platform lacks a clear onboarding journey for new users after sign-up
+          </li>
+          <li>
+            Metrics and roadmap sections add credibility, but lack context, progression, and user interaction
+          </li>
+          <li>
+            Social media links feel underutilized and do not yet function as meaningful engagement channels within the overall journey
           </li>
         </ul>
+      </CaseStudySection>
+
+      <CaseStudyDivider />
+
+      <CaseStudySection title="Experience Gap: Awareness vs Participation">
+        <p className="mb-4">
+          The biggest opportunity lies in bridging the gap between awareness and action.
+        </p>
+
+        <p className="mb-4">
+          Currently, the website does a strong job of explaining what SoftNigeria stands for, but provides limited direction on how users can actively participate, contribute, or stay engaged over time.
+        </p>
+
+        <ul className="list-disc space-y-2 pl-6">
+          <li>No clear journey from interest to involvement</li>
+          <li>No role-based or personalized entry points</li>
+          <li>No structured engagement flow across initiatives</li>
+          <li>No clear explanation of what happens after sign-up</li>
+        </ul>
+      </CaseStudySection>
+
+      <CaseStudyDivider />
+
+      <CaseStudySection title="Interaction Limitations">
+        <p className="mb-4">
+          A large portion of the experience is static. Users consume information, but they are not encouraged to interact with it in meaningful ways.
+        </p>
+
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Initiatives are not clickable or expandable</li>
+          <li>No access to events, town halls, or community activities</li>
+          <li>No visibility into local chapters or participation options</li>
+          <li>No feedback loops, updates, or progress experiences</li>
+        </ul>
+
+        <p className="mt-4">
+          As a result, the platform feels more like a campaign presentation than a living movement users can actively engage with.
+        </p>
+      </CaseStudySection>
+
+      <CaseStudyDivider />
+
+      <CaseStudySection title="Structural Gaps">
+        <p className="mb-4">
+          Beyond interaction limitations, the site structure itself is still too shallow for a movement of this nature.
+        </p>
+
+        <ul className="list-disc space-y-2 pl-6">
+          <li>No dedicated About page explaining the movement’s background, leadership, and long-term vision</li>
+          <li>No clear Contact page or communication path for questions, partnerships, volunteer interest, or media inquiries</li>
+          <li>No dedicated pages for programs, events, or initiatives</li>
+          <li>No supporting trust-building pages such as FAQs, leadership details, or community chapters</li>
+        </ul>
+
+        <p className="mt-4">
+          These missing pages make the website feel like a single landing page rather than a complete civic participation ecosystem.
+        </p>
       </CaseStudySection>
 
       <CaseStudyDivider />
 
       <CaseStudySection title="Project Objectives">
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Create a clearer and more engaging homepage structure</li>
-          <li>Improve content discovery across categories and sections</li>
-          <li>Strengthen the platform’s visual identity</li>
-          <li>Make the experience more intuitive on mobile devices</li>
-          <li>
-            Better support SoftNigeria’s business promotion and audience
-            engagement goals
-          </li>
-        </ul>
-      </CaseStudySection>
-
-      <CaseStudyDivider />
-
-      <CaseStudySection title="Process">
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Reviewed the current website structure and navigation</li>
-          <li>Assessed homepage layout and content presentation patterns</li>
-          <li>Identified hierarchy, usability, and discovery gaps</li>
-          <li>
-            Evaluated how the platform could better support engagement and
-            promotion
-          </li>
-          <li>
-            Defined a redesign direction based on modern content platform
-            patterns
-          </li>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Create a clear transition from awareness to participation</li>
+          <li>Improve navigation and information architecture</li>
+          <li>Introduce structured engagement pathways</li>
+          <li>Make initiatives interactive and explorable</li>
+          <li>Strengthen trust through supporting pages and clearer communication pathways</li>
+          <li>Design a more intuitive mobile experience</li>
+          <li>Support long-term user engagement beyond sign-up</li>
         </ul>
       </CaseStudySection>
 
@@ -152,17 +200,18 @@ export default function SoftNigeriaCaseStudy() {
 
       <CaseStudySection title="Proposed Experience Direction">
         <p className="mb-4">
-          Rather than functioning primarily as a simple post feed, SoftNigeria
-          could evolve into a more structured lifestyle discovery platform.
+          To better support its mission, SoftNigeria can evolve from an awareness-driven landing page into a more complete civic engagement platform.
         </p>
 
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Hero section for featured stories or highlighted experiences</li>
-          <li>Trending categories such as food, events, travel, and nightlife</li>
-          <li>Featured business spotlight sections</li>
-          <li>Improved article cards with stronger imagery and metadata</li>
-          <li>More intentional spacing, typography, and mobile responsiveness</li>
-          <li>Newsletter and audience retention features</li>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Clear “Get Involved” flows tailored to different user types</li>
+          <li>Dedicated pages for programs, initiatives, and impact areas</li>
+          <li>Interactive sections for events, town halls, and community participation</li>
+          <li>Step-by-step onboarding explaining how users can contribute</li>
+          <li>Dedicated About and Contact pages to improve trust and transparency</li>
+          <li>Better use of social channels as part of the overall engagement journey</li>
+          <li>Supporting pages such as FAQs, leadership details, and initiative-specific content</li>
+          <li>More intentional mobile-first design for faster understanding and action</li>
         </ul>
       </CaseStudySection>
 
@@ -170,21 +219,15 @@ export default function SoftNigeriaCaseStudy() {
 
       <CaseStudySection title="Product Opportunity">
         <p className="mb-4">
-          SoftNigeria has the potential to become more than a blog. With the
-          right structure, it could operate as a city-focused discovery platform
-          that helps users find places, experiences, and events while also
-          giving businesses stronger visibility.
+          SoftNigeria already has a strong mission, identity, and thematic direction. The next stage of growth depends on translating that clarity into a structured digital experience that supports participation at scale.
         </p>
 
         <p className="mb-4">
-          This would improve not only usability, but also the platform’s value
-          proposition for readers, advertisers, and featured brands.
+          By improving how users explore, join, trust, and engage with the movement, the platform can move from simply informing people to actively mobilizing them.
         </p>
 
         <p>
-          A stronger digital experience could increase user engagement, improve
-          discoverability of content, and better align the website with the
-          platform’s broader brand ambition.
+          That shift would strengthen engagement, improve retention, and better align the website with the movement’s long-term civic vision.
         </p>
       </CaseStudySection>
 
@@ -192,29 +235,18 @@ export default function SoftNigeriaCaseStudy() {
 
       <CaseStudySection title="Project Status">
         <p>
-          This work was created as an independent UX audit and redesign concept.
-          No functional demo was developed for this version. The case study
-          serves as a strategic review of the current experience and a proposal
-          for how the platform could evolve.
+          This work was created as an independent UX audit and redesign concept. No functional demo was developed for this version. The case study serves as a strategic proposal for how the platform could evolve into a more effective civic participation experience.
         </p>
       </CaseStudySection>
 
       <CaseStudyDivider />
 
       <CaseStudySection title="Key Takeaways" className="mb-0">
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
-            Strengthened my ability to evaluate content-driven platforms from a
-            UX and product perspective
-          </li>
-          <li>
-            Practiced identifying gaps between brand identity and digital
-            experience
-          </li>
-          <li>
-            Explored how design decisions can improve discovery, engagement, and
-            platform clarity
-          </li>
+        <ul className="list-disc space-y-2 pl-6">
+          <li>Improved my ability to analyze mission-driven platforms</li>
+          <li>Learned to identify gaps between purpose, trust, and user interaction</li>
+          <li>Strengthened product thinking around onboarding, participation, and engagement</li>
+          <li>Explored how design can support action, not just awareness</li>
         </ul>
       </CaseStudySection>
     </main>

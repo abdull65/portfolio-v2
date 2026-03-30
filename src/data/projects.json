@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "title": "LaGold Bakery",
+      "description": "Independent UX audit and proposed redesign concept focused on improving trust, local relevance, and conversion for a bakery brand.",
+      "caseStudySlug": "lagold-bakery",
+      "previewSrc": "/images/lagold-bakery-preview.png",
+      "tech": ["Case Study", "UX Audit", "Brand Strategy", "Product Thinking", "Conversion"]
+    },
+    {
       "title": "Bridge Connect Africa",
       "description": "Proposed website redesign focused on improving structure, clarity, and user experience.",
       "caseStudySlug": "bridge-connect",
@@ -24,12 +31,12 @@
       "link": "https://bomesdigitals.com"
     },
     {
-      "title": "Getlinked – Hackathon Platform",
-      "description": "A hackathon website I participated in building during the Getlinked Hackathon 2023.",
-      "tech": ["HTML", "CSS", "JavaScript"],
-      "previewSrc": "/images/getlinked.png",
-      "videoSrc": "/videos/getlinked.webm",
-      "link": "https://usum-getlinked-project.netlify.app/"
+      "title": "AZ Goods and Services LTD",
+      "description": "A responsive multi-page e-commerce website for a household goods and services business.",
+      "tech": ["Shopify", "Custom CSS"],
+      "previewSrc": "/images/az-goods.png",
+      "videoSrc": "/videos/az-goods.webm",
+      "link": "https://azgoodsandservicesltd.com"
     },
     {
       "title": "Blessed Prinx Cosmetics",
@@ -38,6 +45,14 @@
       "previewSrc": "/images/blessed-prinx.png",
       "videoSrc": "/videos/blessed-prinx.webm",
       "link": "https://blessedprinxcosmetics.com"
+    },
+     {
+      "title": "Getlinked – Hackathon Platform",
+      "description": "A hackathon website I participated in building during the Getlinked Hackathon 2023.",
+      "tech": ["HTML", "CSS", "JavaScript"],
+      "previewSrc": "/images/getlinked.png",
+      "videoSrc": "/videos/getlinked.webm",
+      "link": "https://usum-getlinked-project.netlify.app/"
     },
     {
       "title": "Portfolio Website v1.0",
@@ -54,14 +69,6 @@
       "previewSrc": "/images/limas-abayas.png",
       "videoSrc": "/videos/limas-abayas.webm",
       "link": "https://limas-abayas.com"
-    },
-    {
-      "title": "AZ Goods and Services LTD",
-      "description": "A responsive multi-page e-commerce website for a household goods and services business.",
-      "tech": ["Shopify", "Custom CSS"],
-      "previewSrc": "/images/az-goods.png",
-      "videoSrc": "/videos/az-goods.webm",
-      "link": "https://azgoodsandservicesltd.com"
     }
   ]
 }

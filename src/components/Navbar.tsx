@@ -19,6 +19,7 @@ const navLinks = [
 const caseStudyLinks = [
   { name: "Bridge Connect Africa", href: "/case-studies/bridge-connect" },
   { name: "SoftNigeria", href: "/case-studies/softnigeria" },
+  { name: "La Gold Bakery", href: "/case-studies/la-gold-bakery" },
 ] as const;
 
 export default function Navbar() {

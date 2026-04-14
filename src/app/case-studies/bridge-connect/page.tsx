@@ -161,9 +161,10 @@ export default function BridgeConnect() {
 
       <CaseStudySection title="Project Status">
         <p>
-          This work was created as a <strong>proposed redesign and concept</strong>{" "}
-          while discussions around the website revamp were ongoing. It serves as
-          a visual reference and starting point for future conversations.
+          This work was created as a{" "}
+          <strong>proposed redesign and concept</strong> while discussions
+          around the website revamp were ongoing. It serves as a visual
+          reference and starting point for future conversations.
         </p>
       </CaseStudySection>
 
@@ -173,7 +174,9 @@ export default function BridgeConnect() {
         <ul className="list-disc pl-6 space-y-2">
           <li>Improved my approach to reviewing existing websites</li>
           <li>Learned to communicate UX ideas visually</li>
-          <li>Explored scalable WordPress setups for organizations and teams</li>
+          <li>
+            Explored scalable WordPress setups for organizations and teams
+          </li>
         </ul>
       </CaseStudySection>
     </main>

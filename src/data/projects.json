@@ -1,5 +1,21 @@
 {
   "projects": [
+   {
+  "title": "Sobel Properties",
+  "description": "A founder-led landing page concept for a real estate mentorship brand, focused on stronger storytelling, clearer positioning, and a more premium conversion-driven experience.",
+  "caseStudySlug": "sobel-properties",
+  "previewSrc": "/images/sobel-properties-preview-after.png",
+  "videoSrc": "/videos/sobel-properties.webm",
+  "tech": ["Case Study", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"]
+},
+    {
+      "title": "Premald Homes",
+      "description": "A full-stack serviced apartment platform built with a custom CMS, admin dashboard, dynamic listings, and a conversion-focused WhatsApp inquiry flow.",
+      "caseStudySlug": "premald-homes",
+      "previewSrc": "/images/premald-homes-preview.png",
+      "videoSrc": "/videos/premald-homes.webm",
+      "tech": ["Next.js", "TypeScript", "Tailwind CSS", "Sanity CMS", "Vercel"]
+    },
     {
       "title": "LaGold Bakery",
       "description": "Independent UX audit and proposed redesign concept focused on improving trust, local relevance, and conversion for a bakery brand.",
@@ -17,7 +33,7 @@
     },
     {
       "title": "SoftNigeria",
-      "description": "Independent UX audit and proposed redesign direction for a lifestyle media and discovery platform.",
+      "description": "Independent UX audit and proposed redesign direction for a youth civic engagement platform focused on participation, trust, and onboarding.",
       "caseStudySlug": "softnigeria",
       "previewSrc": "/images/softnigeria-preview.png",
       "tech": ["Case Study", "UX Audit", "Content Strategy", "Product Thinking", "Responsive Design"]
@@ -46,7 +62,7 @@
       "videoSrc": "/videos/blessed-prinx.webm",
       "link": "https://blessedprinxcosmetics.com"
     },
-     {
+    {
       "title": "Getlinked – Hackathon Platform",
       "description": "A hackathon website I participated in building during the Getlinked Hackathon 2023.",
       "tech": ["HTML", "CSS", "JavaScript"],

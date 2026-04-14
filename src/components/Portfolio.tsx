@@ -19,7 +19,9 @@ type Project = {
 
 export default function PortfolioSection() {
   const [visibleCount, setVisibleCount] = useState(4);
-  const [projects, setProjects] = useState<Project[]>(staticProjects.projects ?? []);
+  const [projects, setProjects] = useState<Project[]>(
+    staticProjects.projects ?? [],
+  );
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -50,7 +52,7 @@ export default function PortfolioSection() {
 
   const visibleProjects = useMemo(
     () => projects.slice(0, visibleCount),
-    [projects, visibleCount]
+    [projects, visibleCount],
   );
 
   const handleToggleView = () => {
@@ -84,7 +86,7 @@ export default function PortfolioSection() {
               const isCaseStudy = Boolean(project.caseStudySlug);
               const href = isCaseStudy
                 ? `/case-studies/${project.caseStudySlug}`
-                : project.link ?? "#";
+                : (project.link ?? "#");
 
               return (
                 <motion.div

@@ -7,7 +7,7 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="mx-auto max-w-6xl rounded-xl bg-gray-50 px-4 pb-16 pt-4 dark:bg-gray-950"
+      className="mx-auto max-w-6xl md:rounded-xl bg-gray-50 px-4 pb-16 pt-4 dark:bg-gray-950"
     >
       <div className="flex flex-col items-center justify-center gap-12 text-left md:flex-row">
         <motion.div

@@ -7,12 +7,11 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="max-w-6xl mx-auto px-4 py-16 bg-gray-50 dark:bg-gray-950 rounded-xl"
+      className="mx-auto max-w-6xl rounded-xl bg-gray-50 px-4 pb-16 dark:bg-gray-950"
     >
-      <div className="flex flex-col md:flex-row items-center justify-center gap-12 text-left">
-        {/* Profile Image */}
+      <div className="flex flex-col items-center justify-center gap-12 text-left md:flex-row">
         <motion.div
-          className="h-80 w-full md:w-80 rounded-3xl overflow-hidden border-4 border-gray-300 dark:border-gray-700 shadow-lg"
+          className="relative h-80 w-full md:max-w-sm overflow-hidden rounded-3xl border-4 border-gray-300 shadow-lg dark:border-gray-700 md:w-80"
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -20,14 +19,12 @@ export default function AboutMe() {
         >
           <Image
             src="/images/about-photo.png"
-            alt="Abdullahi's Profile"
-            width={256}
-            height={320}
-            className="object-cover w-full h-full grayscale"
+            alt="Portrait of Abdullahi Mohammed"
+            fill
+            className="object-cover grayscale"
           />
         </motion.div>
 
-        {/* Text & Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,27 +32,23 @@ export default function AboutMe() {
           transition={{ duration: 0.6 }}
           className="max-w-xl md:ml-6"
         >
-          <motion.h2
-          initial={{opacity: 0, y: -30}}
-          whileInView={{opacity: 1, y: 0}}
-          viewport={{once: true}}
-          transition={{duration: 0.6}}
-          className="text-3xl font-bold mb-6 text-gray-800 dark:text-gray-100">
+          <h2 className="mb-6 text-3xl font-bold text-gray-800 dark:text-gray-100">
             About Me
-          </motion.h2>
-          <p className="text-gray-800 dark:text-gray-100 text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-            I’m a passionate Frontend Developer with a strong eye for clean UI
-            and responsive design. I specialize in building fast, accessible,
-            and user-friendly web applications using modern technologies like
-            React, Next.js, and Tailwind CSS. I love solving problems,
-            collaborating with teams, and continuously learning to improve my
-            craft.
+          </h2>
+
+          <p className="mb-6 text-base leading-relaxed text-gray-600 dark:text-gray-300 md:text-lg">
+            I’m a frontend developer focused on building clean, responsive, and
+            user-friendly digital experiences. I enjoy turning ideas into
+            polished interfaces with React, Next.js, and Tailwind CSS, while
+            paying close attention to usability, performance, and visual
+            clarity.
           </p>
+
           <motion.a
             href="#contact"
-             className="inline-flex items-center border-4 border-gray-800 dark:border-gray-100 text-lg text-gray-800 dark:text-gray-100 px-6 py-2 rounded-full shadow hover:bg-primary/90 transition"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="inline-flex items-center rounded-full border-2 border-gray-800 px-6 py-3 text-lg text-gray-800 shadow transition hover:bg-gray-100 dark:border-gray-100 dark:text-gray-100 dark:hover:bg-gray-900"
           >
             Get in Touch
           </motion.a>

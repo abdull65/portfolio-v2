@@ -262,7 +262,7 @@ export default function NextIFCaseStudy() {
 
         <p className="mb-6">
           <a
-            href="YOUR_LIVE_DEMO_LINK_HERE"
+            href="https://nextif-redesign.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-600 underline dark:text-blue-400"

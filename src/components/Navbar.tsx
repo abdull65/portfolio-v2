@@ -17,6 +17,7 @@ const navLinks = [
 ] as const;
 
 const caseStudyLinks = [
+  { name: "NextIf", href: "/case-studies/nextIf" },
   { name: "Sobel Properties", href: "/case-studies/sobel-properties" },
   { name: "Premald Homes", href: "/case-studies/premald-homes" },
   { name: "Bridge Connect Africa", href: "/case-studies/bridge-connect" },

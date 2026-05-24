@@ -1,12 +1,27 @@
 {
   "projects": [
+    {
+  "title": "NextIF",
+  "description": "A proposed homepage redesign for a global ethical finance and innovation ecosystem, focused on improving trust, ecosystem clarity, mobile experience, and modern visual storytelling.",
+  "caseStudySlug": "nextif",
+  "previewSrc": "/images/nextif-preview-after.png",
+  "videoSrc": "/videos/nextif-demo.webm",
+  "tech": [
+    "Case Study",
+    "Next.js",
+    "TypeScript",
+    "Tailwind CSS",
+    "shadcn/ui",
+    "Vercel"
+  ]
+},
    {
   "title": "Sobel Properties",
   "description": "A founder-led landing page concept for a real estate mentorship brand, focused on stronger storytelling, clearer positioning, and a more premium conversion-driven experience.",
   "caseStudySlug": "sobel-properties",
   "previewSrc": "/images/sobel-properties-preview-after.png",
   "videoSrc": "/videos/sobel-properties.webm",
-  "tech": ["Case Study", "Next.js", "TypeScript", "Tailwind CSS", "Vercel"]
+  "tech": ["Case Study", "Next.js", "TypeScript", "Tailwind CSS"]
 },
     {
       "title": "Premald Homes",
@@ -21,7 +36,7 @@
       "description": "Independent UX audit and proposed redesign concept focused on improving trust, local relevance, and conversion for a bakery brand.",
       "caseStudySlug": "lagold-bakery",
       "previewSrc": "/images/lagold-bakery-preview.png",
-      "tech": ["Case Study", "UX Audit", "Brand Strategy", "Product Thinking", "Conversion"]
+      "tech": ["Case Study", "UX Audit", "Brand Strategy", "Product Thinking"]
     },
     {
       "title": "Bridge Connect Africa",
